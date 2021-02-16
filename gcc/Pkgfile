@@ -1,0 +1,85 @@
+# Description:	The GNU Compiler Collection - experimental !!!
+# URL:		http://gcc.gnu.org
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	mpc zlib zstd
+
+name=gcc
+version=11-20210214
+_realversion=11.0.0
+release=0
+source=(ftp://ftp.fu-berlin.de/unix/languages/${name}/snapshots/${version}/${name}-${version}.tar.xz \
+	c89 c99)
+
+build() {
+	cd $SRC
+
+	sed -i '/lp64=/s/lib64/lib/' $SRC/${name}-${version}/${name}/config/aarch64/t-aarch64-linux
+
+	mkdir $SRC/build
+	cd $SRC/build
+
+	export CHOST="aarch64-unknown-linux-gnu"
+
+	export CFLAGS="${CFLAGS} -g -grecord-gcc-switches"
+	export CXXFLAGS="${CXXFLAGS} -g -grecord-gcc-switches"
+
+	../${name}-${version}/configure \
+				--build=${CHOST} \
+				--host=${CHOST} \
+				--target=${CHOST} \
+				--prefix=/usr \
+				--libexecdir=/usr/lib \
+				--enable-bootstrap \
+				--enable-languages=c,c++,objc,fortran,lto \
+				--enable-checking=release \
+				--enable-threads=posix \
+				--enable-__cxa_atexit \
+				--enable-clocale=gnu \
+				--enable-default-pie \
+				--enable-default-ssp \
+				--enable-gnu-indirect-function \
+				--enable-standard-branch-protection \
+				--enable-initfini-array \
+				--enable-gnu-unique-object \
+				--enable-linker-build-id \
+				--enable-shared \
+				--enable-gold=no \
+				--enable-plugin \
+				--disable-nls \
+				--disable-multilib \
+				--disable-libssp \
+				--disable-libunwind-exceptions \
+				--with-arch=armv8-a \
+				--with-abi=lp64 \
+				--with-system-zlib \
+				--with-linker-hash-style=gnu \
+				--with-bugurl=https://github.com/sajcho/saux/issue \
+				--with-pkgversion="SAUX Aarch64"
+
+	make bootstrap
+
+	make -k check < /dev/null || :
+
+	$SRC/${name}-${version}/contrib/test_summary \
+		> $PKGMK_PACKAGE_DIR/${name}-${version}-result-test
+
+	make -j1 DESTDIR=$PKG install
+
+	mkdir $PKG/lib
+	ln -sf ../usr/bin/cpp $PKG/lib/cpp
+	ln -sf gcc $PKG/usr/bin/cc
+	ln -sf g++ $PKG/usr/bin/c++
+
+	mv $PKG/usr/lib/${name}/$CHOST/${_realversion}/include-fixed/{limits.h,syslimits.h} \
+		$PKG/usr/lib/${name}/$CHOST/${_realversion}/include/
+
+	install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/lib
+	mv $PKG/usr/lib/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/lib
+
+	install -m 0755 $SRC/{c89,c99} $PKG/usr/bin
+
+	rm -r $PKG/usr/share/{info,${name}-${_realversion}}
+	rm -r $PKG/usr/lib/${name}/$CHOST/${_realversion}/{install-tools,include-fixed}
+
+	sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib/{libstdc++.la,libsupc++.la}
+}

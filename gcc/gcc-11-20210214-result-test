@@ -1,0 +1,669 @@
+cat <<'EOF' |
+LAST_UPDATED: Obtained from git: master revision 9966699d7a9d8e35c0c4cf9a945bcf90ef874f2d
+
+Native configuration is aarch64-unknown-linux-gnu
+
+		=== libatomic tests ===
+
+
+Running target unix
+
+		=== libatomic Summary ===
+
+# of expected passes		54
+		=== libgomp tests ===
+
+
+Running target unix
+UNRESOLVED: libgomp.oacc-fortran/array-stride-dt-1.f90 -DACC_DEVICE_TYPE_host=1 -DACC_MEM_SHARED=1 -foffload=disable  -O0  compilation failed to produce executable
+UNRESOLVED: libgomp.oacc-fortran/array-stride-dt-1.f90 -DACC_DEVICE_TYPE_host=1 -DACC_MEM_SHARED=1 -foffload=disable  -O1  compilation failed to produce executable
+UNRESOLVED: libgomp.oacc-fortran/array-stride-dt-1.f90 -DACC_DEVICE_TYPE_host=1 -DACC_MEM_SHARED=1 -foffload=disable  -O2  compilation failed to produce executable
+UNRESOLVED: libgomp.oacc-fortran/array-stride-dt-1.f90 -DACC_DEVICE_TYPE_host=1 -DACC_MEM_SHARED=1 -foffload=disable  -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  compilation failed to produce executable
+UNRESOLVED: libgomp.oacc-fortran/array-stride-dt-1.f90 -DACC_DEVICE_TYPE_host=1 -DACC_MEM_SHARED=1 -foffload=disable  -O3 -g  compilation failed to produce executable
+UNRESOLVED: libgomp.oacc-fortran/array-stride-dt-1.f90 -DACC_DEVICE_TYPE_host=1 -DACC_MEM_SHARED=1 -foffload=disable  -Os  compilation failed to produce executable
+
+		=== libgomp Summary ===
+
+# of expected passes		8090
+# of expected failures		4
+# of unresolved testcases	6
+# of unsupported tests		610
+		=== libitm tests ===
+
+
+Running target unix
+
+		=== libitm Summary ===
+
+# of expected passes		42
+# of expected failures		3
+# of unsupported tests		1
+		=== libstdc++ tests ===
+
+
+Running target unix
+
+		=== libstdc++ Summary ===
+
+# of expected passes		14618
+# of unexpected failures	16
+# of expected failures		104
+# of unsupported tests		721
+		=== g++ tests ===
+
+
+Running target unix
+XPASS: g++.dg/cpp0x/constexpr-52830.C  -std=c++14 (internal compiler error)
+XPASS: g++.dg/cpp0x/constexpr-52830.C  -std=c++17 (internal compiler error)
+XPASS: g++.dg/cpp0x/constexpr-52830.C  -std=c++2a (internal compiler error)
+XPASS: g++.target/aarch64/bfloat_cpp_typecheck.C  (test for bogus messages, line 10)
+XPASS: g++.target/aarch64/bfloat_cpp_typecheck.C  (test for bogus messages, line 11)
+
+		=== g++ Summary ===
+
+# of expected passes		253427
+# of unexpected failures	61144
+# of unexpected successes	5
+# of expected failures		2207
+# of unsupported tests		9329
+/home/saux-devel/gcc-11/gcc/work/src/build/gcc/xg++  version 11.0.0 20210214 (experimental) (SAUX Aarch64) 
+
+		=== gcc tests ===
+
+
+Running target unix
+XPASS: gcc.dg/guality/example.c   -O0  execution test
+XPASS: gcc.dg/guality/example.c   -O1  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/example.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  -DPREVENT_OPTIMIZATION execution test
+XPASS: gcc.dg/guality/example.c  -Og -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/guality.c   -O0  execution test
+XPASS: gcc.dg/guality/guality.c   -O1  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/guality.c   -O2  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/guality.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  -DPREVENT_OPTIMIZATION execution test
+XPASS: gcc.dg/guality/guality.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  -DPREVENT_OPTIMIZATION execution test
+XPASS: gcc.dg/guality/guality.c   -O3 -g  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/guality.c   -Os  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/guality.c  -Og -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/inline-params.c   -O2  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/inline-params.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  -DPREVENT_OPTIMIZATION execution test
+XPASS: gcc.dg/guality/inline-params.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  -DPREVENT_OPTIMIZATION execution test
+XPASS: gcc.dg/guality/inline-params.c   -O3 -g  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/inline-params.c   -Os  -DPREVENT_OPTIMIZATION  execution test
+XPASS: gcc.dg/guality/pr41353-1.c   -O0  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c   -O1  -DPREVENT_OPTIMIZATION  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c   -O2  -DPREVENT_OPTIMIZATION  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  -DPREVENT_OPTIMIZATION line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  -DPREVENT_OPTIMIZATION line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c   -O3 -g  -DPREVENT_OPTIMIZATION  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c   -Os  -DPREVENT_OPTIMIZATION  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -Og -DPREVENT_OPTIMIZATION  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 15 a[0] == 1
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 20 a[0] == 1
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 25 a[0] == 1
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 31 a[0] == 4
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 36 a[0] == 4
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 45 a[0] == 4
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 45 p[-2] == 4
+XPASS: gcc.dg/guality/pr54970.c   -O0  line 45 q[-1] == 4
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 15 a[0] == 1
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 20 a[0] == 1
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 25 a[0] == 1
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 31 a[0] == 4
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 36 a[0] == 4
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 45 a[0] == 4
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 45 p[-2] == 4
+XPASS: gcc.dg/guality/pr54970.c  -Og -DPREVENT_OPTIMIZATION  line 45 q[-1] == 4
+XPASS: gcc.dg/guality/pr59776.c   -O0  line pr59776.c:17 s2.g == 6.0
+XPASS: gcc.dg/guality/pr59776.c   -O0  line pr59776.c:20 s2.g == 6.0
+UNRESOLVED: gcc.dg/tls/pr78796.c compilation failed to produce executable
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_1.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_1.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_1.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_1.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_1.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_1.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_10.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_10.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_10.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_10.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_10.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_10.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_11.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_11.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_11.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_11.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_11.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_11.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_12.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_12.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_12.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_12.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_12.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_12.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_13.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_13.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_13.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_13.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_13.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_13.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_14.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_14.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_14.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_14.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_14.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_14.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_15.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_15.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_15.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_15.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_15.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_15.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_16.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_16.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_16.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_16.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_16.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_16.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_17.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_17.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_17.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_17.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_17.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_17.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_18.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_18.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_18.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_18.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_18.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_18.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_19.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_19.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_19.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_19.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_19.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_19.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_2.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_2.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_2.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_2.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_2.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_2.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_20.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_20.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_20.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_20.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_20.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_20.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_21.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_21.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_21.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_21.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_21.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_21.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_22.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_22.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_22.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_22.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_22.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_22.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_23.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_23.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_23.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_23.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_23.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_23.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_24.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_24.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_24.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_24.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_24.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_24.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_25.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_25.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_25.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_25.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_25.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_25.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_26.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_26.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_26.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_26.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_26.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_26.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_27.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_27.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_27.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_27.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_27.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_27.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_3.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_3.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_3.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_3.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_3.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_3.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_4.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_4.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_4.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_4.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_4.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_4.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_5.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_5.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_5.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_5.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_5.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_5.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_6.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_6.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_6.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_6.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_6.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_6.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_64x1_1.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_64x1_1.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_64x1_1.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_64x1_1.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_64x1_1.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_64x1_1.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_7.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_7.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_7.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_7.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_7.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_7.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_8.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_8.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_8.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_8.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_8.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_8.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_9.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_9.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_9.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_9.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_9.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_9.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-1.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-1.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-1.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-1.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-1.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-1.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-10.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-10.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-10.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-10.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-10.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-10.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-11.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-11.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-11.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-11.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-11.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-11.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-12.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-12.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-12.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-12.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-12.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-12.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-2.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-2.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-2.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-2.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-2.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-2.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-3.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-3.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-3.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-3.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-3.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-3.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-4.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-4.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-4.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-4.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-4.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-4.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-5.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-5.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-5.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-5.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-5.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-5.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-6.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-6.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-6.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-6.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-6.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-6.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-7.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-7.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-7.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-7.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-7.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-7.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-8.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-8.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-8.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-8.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-8.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-8.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-9.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-9.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-9.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-9.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-9.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_align-9.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_complex.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_complex.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_complex.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_complex.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_complex.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_complex.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_int128.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_int128.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_int128.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_int128.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_int128.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_int128.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_quad_double.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_quad_double.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_quad_double.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_quad_double.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_quad_double.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/test_quad_double.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-1.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-1.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-1.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-1.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-1.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-1.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-10.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-10.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-10.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-10.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-10.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-10.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-11.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-11.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-11.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-11.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-11.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-11.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-12.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-12.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-12.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-12.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-12.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-12.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-13.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-13.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-13.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-13.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-13.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-13.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-14.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-14.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-14.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-14.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-14.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-14.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-15.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-15.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-15.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-15.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-15.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-15.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-16.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-16.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-16.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-16.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-16.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-16.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-2.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-2.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-2.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-2.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-2.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-2.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-3.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-3.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-3.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-3.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-3.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-3.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-4.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-4.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-4.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-4.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-4.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-4.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-5.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-5.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-5.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-5.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-5.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-5.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-6.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-6.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-6.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-6.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-6.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-6.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-7.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-7.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-7.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-7.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-7.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-7.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-8.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-8.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-8.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-8.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-8.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-8.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-9.c execution,  -O0 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-9.c execution,  -O1 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-9.c execution,  -O2 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-9.c execution,  -O3 -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-9.c execution,  -Og -g 
+UNRESOLVED: gcc.target/aarch64/aapcs64/va_arg-9.c execution,  -Os 
+UNRESOLVED: gcc.target/aarch64/pr70044.c scan-lto-assembler (mov|add)\\tx29, sp
+UNRESOLVED: gcc.target/aarch64/pr78733.c scan-assembler adr
+UNRESOLVED: gcc.target/aarch64/pr78733.c scan-assembler-not adrp
+UNRESOLVED: gcc.target/aarch64/pr79041-2.c scan-assembler adr
+UNRESOLVED: gcc.target/aarch64/pr79041-2.c scan-assembler-not adrp
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O1   check-function-bodies test_vget_high_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O1   check-function-bodies test_vget_low_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O2   check-function-bodies test_vget_high_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O2   check-function-bodies test_vget_low_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies test_vget_high_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies test_vget_low_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O3 -g   check-function-bodies test_vget_high_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -O3 -g   check-function-bodies test_vget_low_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -Og -g   check-function-bodies test_vget_high_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -Og -g   check-function-bodies test_vget_low_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -Os   check-function-bodies test_vget_high_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bf16_get-be.c   -Os   check-function-bodies test_vget_low_bf16
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufooq_lane_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O1   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufooq_lane_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq_lane_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufooq_lane_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -O3 -g   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufooq_lane_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Og -g   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufooq_lane_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/bfdot-2.c   -Os   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies sfoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies sfoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies sfooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies sfooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O1   check-function-bodies ufooq_laneq_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies sfoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies sfoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies sfooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies sfooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2   check-function-bodies ufooq_laneq_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies sfoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies sfoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies sfooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies sfooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies ufooq_laneq_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies sfoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies sfoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies sfooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies sfooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -O3 -g   check-function-bodies ufooq_laneq_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies sfoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies sfoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies sfooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies sfooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Og -g   check-function-bodies ufooq_laneq_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies sfoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies sfoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies sfooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies sfooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufoo
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufoo_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufoo_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufoo_untied
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufooq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufooq_lane
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufooq_laneq
+UNRESOLVED: gcc.target/aarch64/advsimd-intrinsics/vdot-3-2.c   -Os   check-function-bodies ufooq_laneq_untied
+
+		=== gcc Summary ===
+
+# of expected passes		199118
+# of unexpected failures	63547
+# of unexpected successes	43
+# of expected failures		2108
+# of unresolved testcases	492
+# of unsupported tests		4220
+/home/saux-devel/gcc-11/gcc/work/src/build/gcc/xgcc  version 11.0.0 20210214 (experimental) (SAUX Aarch64) 
+
+		=== gfortran tests ===
+
+
+Running target unix
+UNRESOLVED: gfortran.dg/pr96711.f90   -O0   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+UNRESOLVED: gfortran.dg/pr96711.f90   -O0  compilation failed to produce executable
+UNRESOLVED: gfortran.dg/pr96711.f90   -O1   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+UNRESOLVED: gfortran.dg/pr96711.f90   -O1  compilation failed to produce executable
+UNRESOLVED: gfortran.dg/pr96711.f90   -O2   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+UNRESOLVED: gfortran.dg/pr96711.f90   -O2  compilation failed to produce executable
+UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  compilation failed to produce executable
+UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -g   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -g  compilation failed to produce executable
+UNRESOLVED: gfortran.dg/pr96711.f90   -Os   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+UNRESOLVED: gfortran.dg/pr96711.f90   -Os  compilation failed to produce executable
+XPASS: gfortran.dg/ieee/ieee_8.f90   -O0  execution test
+XPASS: gfortran.dg/ieee/ieee_8.f90   -O1  execution test
+XPASS: gfortran.dg/ieee/ieee_8.f90   -O2  execution test
+XPASS: gfortran.dg/ieee/ieee_8.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+XPASS: gfortran.dg/ieee/ieee_8.f90   -O3 -g  execution test
+XPASS: gfortran.dg/ieee/ieee_8.f90   -Os  execution test
+
+		=== gfortran Summary ===
+
+# of expected passes		55409
+# of unexpected failures	18
+# of unexpected successes	6
+# of expected failures		222
+# of unresolved testcases	12
+# of unsupported tests		91
+/home/saux-devel/gcc-11/gcc/work/src/build/gcc/gfortran  version 11.0.0 20210214 (experimental) (SAUX Aarch64) 
+
+		=== objc tests ===
+
+
+Running target unix
+
+		=== objc Summary ===
+
+# of expected passes		2823
+# of unsupported tests		69
+/home/saux-devel/gcc-11/gcc/work/src/build/gcc/xgcc  version 11.0.0 20210214 (experimental) (SAUX Aarch64) 
+
+
+Compiler version: 11.0.0 20210214 (experimental) (SAUX Aarch64) 
+Platform: aarch64-unknown-linux-gnu
+configure flags: --build=aarch64-unknown-linux-gnu --host=aarch64-unknown-linux-gnu --target=aarch64-unknown-linux-gnu --prefix=/usr --libexecdir=/usr/lib --enable-bootstrap --enable-languages=c,c++,objc,fortran,lto --enable-checking=release --enable-threads=posix --enable-__cxa_atexit --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-standard-branch-protection --enable-initfini-array --enable-gnu-unique-object --enable-linker-build-id --enable-shared --enable-gold=no --enable-plugin --disable-nls --disable-multilib --disable-libssp --disable-libunwind-exceptions --with-arch=armv8-a --with-abi=lp64 --with-system-zlib --with-linker-hash-style=gnu --with-bugurl=https://github.com/sajcho/saux/issue --with-pkgversion='SAUX Aarch64'
+EOF
