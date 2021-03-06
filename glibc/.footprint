@@ -531,10 +531,12 @@ drwxr-xr-x	root/root	usr/include/linux/can/
 -rw-r--r--	root/root	usr/include/linux/cdrom.h
 -rw-r--r--	root/root	usr/include/linux/cec-funcs.h
 -rw-r--r--	root/root	usr/include/linux/cec.h
+-rw-r--r--	root/root	usr/include/linux/cfm_bridge.h
 -rw-r--r--	root/root	usr/include/linux/cgroupstats.h
 -rw-r--r--	root/root	usr/include/linux/chio.h
 drwxr-xr-x	root/root	usr/include/linux/cifs/
 -rw-r--r--	root/root	usr/include/linux/cifs/cifs_mount.h
+-rw-r--r--	root/root	usr/include/linux/cifs/cifs_netlink.h
 -rw-r--r--	root/root	usr/include/linux/close_range.h
 -rw-r--r--	root/root	usr/include/linux/cm4000_cs.h
 -rw-r--r--	root/root	usr/include/linux/cn_proc.h
@@ -583,6 +585,7 @@ drwxr-xr-x	root/root	usr/include/linux/dvb/
 -rw-r--r--	root/root	usr/include/linux/ethtool.h
 -rw-r--r--	root/root	usr/include/linux/ethtool_netlink.h
 -rw-r--r--	root/root	usr/include/linux/eventpoll.h
+-rw-r--r--	root/root	usr/include/linux/f2fs.h
 -rw-r--r--	root/root	usr/include/linux/fadvise.h
 -rw-r--r--	root/root	usr/include/linux/falloc.h
 -rw-r--r--	root/root	usr/include/linux/fanotify.h
@@ -650,7 +653,6 @@ drwxr-xr-x	root/root	usr/include/linux/hsi/
 -rw-r--r--	root/root	usr/include/linux/if_ether.h
 -rw-r--r--	root/root	usr/include/linux/if_fc.h
 -rw-r--r--	root/root	usr/include/linux/if_fddi.h
--rw-r--r--	root/root	usr/include/linux/if_frad.h
 -rw-r--r--	root/root	usr/include/linux/if_hippi.h
 -rw-r--r--	root/root	usr/include/linux/if_infiniband.h
 -rw-r--r--	root/root	usr/include/linux/if_link.h
@@ -1004,12 +1006,14 @@ drwxr-xr-x	root/root	usr/include/linux/raid/
 -rw-r--r--	root/root	usr/include/linux/rfkill.h
 -rw-r--r--	root/root	usr/include/linux/rio_cm_cdev.h
 -rw-r--r--	root/root	usr/include/linux/rio_mport_cdev.h
+-rw-r--r--	root/root	usr/include/linux/rkisp1-config.h
 -rw-r--r--	root/root	usr/include/linux/romfs_fs.h
 -rw-r--r--	root/root	usr/include/linux/rose.h
 -rw-r--r--	root/root	usr/include/linux/route.h
 -rw-r--r--	root/root	usr/include/linux/rpl.h
 -rw-r--r--	root/root	usr/include/linux/rpl_iptunnel.h
 -rw-r--r--	root/root	usr/include/linux/rpmsg.h
+-rw-r--r--	root/root	usr/include/linux/rpmsg_types.h
 -rw-r--r--	root/root	usr/include/linux/rseq.h
 -rw-r--r--	root/root	usr/include/linux/rtc.h
 -rw-r--r--	root/root	usr/include/linux/rtnetlink.h
@@ -1021,7 +1025,6 @@ drwxr-xr-x	root/root	usr/include/linux/sched/
 -rw-r--r--	root/root	usr/include/linux/scif_ioctl.h
 -rw-r--r--	root/root	usr/include/linux/screen_info.h
 -rw-r--r--	root/root	usr/include/linux/sctp.h
--rw-r--r--	root/root	usr/include/linux/sdla.h
 -rw-r--r--	root/root	usr/include/linux/seccomp.h
 -rw-r--r--	root/root	usr/include/linux/securebits.h
 -rw-r--r--	root/root	usr/include/linux/sed-opal.h
@@ -1194,9 +1197,6 @@ drwxr-xr-x	root/root	usr/include/linux/usb/
 -rw-r--r--	root/root	usr/include/linux/wait.h
 -rw-r--r--	root/root	usr/include/linux/watch_queue.h
 -rw-r--r--	root/root	usr/include/linux/watchdog.h
--rw-r--r--	root/root	usr/include/linux/wimax.h
-drwxr-xr-x	root/root	usr/include/linux/wimax/
--rw-r--r--	root/root	usr/include/linux/wimax/i2400m.h
 -rw-r--r--	root/root	usr/include/linux/wireguard.h
 -rw-r--r--	root/root	usr/include/linux/wireless.h
 -rw-r--r--	root/root	usr/include/linux/wmi.h
@@ -2029,6 +2029,7 @@ drwxr-xr-x	root/root	usr/share/i18n/charmaps/
 -rw-r--r--	root/root	usr/share/i18n/charmaps/VISCII.gz
 -rw-r--r--	root/root	usr/share/i18n/charmaps/WINDOWS-31J.gz
 drwxr-xr-x	root/root	usr/share/i18n/locales/
+-rw-r--r--	root/root	usr/share/i18n/locales/C
 -rw-r--r--	root/root	usr/share/i18n/locales/POSIX
 -rw-r--r--	root/root	usr/share/i18n/locales/aa_DJ
 -rw-r--r--	root/root	usr/share/i18n/locales/aa_ER
