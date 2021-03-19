@@ -4,7 +4,7 @@
 # Depends on:	mpc zlib zstd
 
 name=gcc
-version=11-20210228
+version=11-20210307
 _realversion=11.0.1
 release=0
 source=(ftp://ftp.fu-berlin.de/unix/languages/${name}/snapshots/${version}/${name}-${version}.tar.xz \
