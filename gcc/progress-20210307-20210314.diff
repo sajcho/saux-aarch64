@@ -1,0 +1,138 @@
+--- gcc-11-20210307-result-test.txt	2021-03-19 10:11:18.640000000 +0100
++++ gcc-11-20210314-result-test.txt	2021-03-20 05:51:57.408000000 +0100
+@@ -1,5 +1,5 @@
+ cat <<'EOF' |
+-LAST_UPDATED: Obtained from git: master revision a18ebd6c439227b048a91fbfa66f5983f884c157
++LAST_UPDATED: Obtained from git: master revision c2d7c39fcb8a3cb67600cdb6fde49ecb0e951589
+ 
+ Native configuration is aarch64-unknown-linux-gnu
+ 
+@@ -18,7 +18,7 @@
+ 
+ 		=== libgomp Summary ===
+ 
+-# of expected passes		8200
++# of expected passes		8202
+ # of expected failures		4
+ # of unsupported tests		610
+ 		=== libitm tests ===
+@@ -54,7 +54,7 @@
+ 
+ 		=== libstdc++ Summary ===
+ 
+-# of expected passes		14680
++# of expected passes		14681
+ # of unexpected failures	16
+ # of expected failures		104
+ # of unsupported tests		695
+@@ -61214,12 +61214,12 @@
+ 
+ 		=== g++ Summary ===
+ 
+-# of expected passes		254090
++# of expected passes		256482
+ # of unexpected failures	61144
+ # of unexpected successes	5
+-# of expected failures		2218
+-# of unsupported tests		9408
+-/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/xg++  version 11.0.1 20210307 (experimental) (SAUX Aarch64) 
++# of expected failures		2233
++# of unsupported tests		9414
++/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/xg++  version 11.0.1 20210314 (experimental) (SAUX Aarch64) 
+ 
+ 		=== gcc tests ===
+ 
+@@ -61229,16 +61229,6 @@
+ FAIL: c-c++-common/attr-retain-7.c  -Wc++-compat   scan-assembler .data.foo,"awR"
+ FAIL: c-c++-common/attr-retain-8.c  -Wc++-compat   (test for warnings, line 5)
+ FAIL: c-c++-common/attr-retain-8.c  -Wc++-compat   scan-assembler .data.foo,"aw"
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?p\$ (found p) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?p1\$ (found p1) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?q\$ (found q) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?q1\$ (found q1) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?r\$ (found r) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?r1\$ (found r1) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?s\$ (found s) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?s1\$ (found s1) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?t\$ (found t) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+-FAIL: gcc.dg/array-quals-1.c scan-assembler-symbol-section symbol ^_?t1\$ (found t1) has section ^\\\\.(const|rodata|srodata|sdata)|\\\\[RW\\\\] (found .data.rel.ro.local)
+ FAIL: gcc.dg/stack-usage-1.c scan-stack-usage foo\\t(256|264)\\tstatic
+ FAIL: gcc.dg/superblock.c scan-rtl-dump-times sched2 "ADVANCING TO" 2
+ FAIL: gcc.dg/gomp/pr89104.c (test for excess errors)
+@@ -125307,42 +125297,18 @@
+ 
+ 		=== gcc Summary ===
+ 
+-# of expected passes		199562
+-# of unexpected failures	63544
++# of expected passes		199607
++# of unexpected failures	63534
+ # of unexpected successes	43
+-# of expected failures		2111
++# of expected failures		2109
+ # of unresolved testcases	492
+ # of unsupported tests		4220
+-/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/xgcc  version 11.0.1 20210307 (experimental) (SAUX Aarch64) 
++/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/xgcc  version 11.0.1 20210314 (experimental) (SAUX Aarch64) 
+ 
+ 		=== gfortran tests ===
+ 
+ 
+ Running target unix
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O0   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+-FAIL: gfortran.dg/pr96711.f90   -O0  (internal compiler error)
+-FAIL: gfortran.dg/pr96711.f90   -O0  (test for excess errors)
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O0  compilation failed to produce executable
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O1   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+-FAIL: gfortran.dg/pr96711.f90   -O1  (internal compiler error)
+-FAIL: gfortran.dg/pr96711.f90   -O1  (test for excess errors)
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O1  compilation failed to produce executable
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O2   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+-FAIL: gfortran.dg/pr96711.f90   -O2  (internal compiler error)
+-FAIL: gfortran.dg/pr96711.f90   -O2  (test for excess errors)
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O2  compilation failed to produce executable
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+-FAIL: gfortran.dg/pr96711.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error)
+-FAIL: gfortran.dg/pr96711.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  compilation failed to produce executable
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -g   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+-FAIL: gfortran.dg/pr96711.f90   -O3 -g  (internal compiler error)
+-FAIL: gfortran.dg/pr96711.f90   -O3 -g  (test for excess errors)
+-UNRESOLVED: gfortran.dg/pr96711.f90   -O3 -g  compilation failed to produce executable
+-UNRESOLVED: gfortran.dg/pr96711.f90   -Os   scan-tree-dump-times original "_gfortran_stop_numeric" 2
+-FAIL: gfortran.dg/pr96711.f90   -Os  (internal compiler error)
+-FAIL: gfortran.dg/pr96711.f90   -Os  (test for excess errors)
+-UNRESOLVED: gfortran.dg/pr96711.f90   -Os  compilation failed to produce executable
+ FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+ FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+ FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+@@ -125358,13 +125324,12 @@
+ 
+ 		=== gfortran Summary ===
+ 
+-# of expected passes		55678
+-# of unexpected failures	18
++# of expected passes		55724
++# of unexpected failures	6
+ # of unexpected successes	6
+ # of expected failures		222
+-# of unresolved testcases	12
+ # of unsupported tests		131
+-/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/gfortran  version 11.0.1 20210307 (experimental) (SAUX Aarch64) 
++/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/gfortran  version 11.0.1 20210314 (experimental) (SAUX Aarch64) 
+ 
+ 		=== objc tests ===
+ 
+@@ -125375,14 +125340,14 @@
+ 
+ # of expected passes		2823
+ # of unsupported tests		69
+-/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/xgcc  version 11.0.1 20210307 (experimental) (SAUX Aarch64) 
++/home/saux-devel/toolchain/experimental/stage1/gcc/work/src/build/gcc/xgcc  version 11.0.1 20210314 (experimental) (SAUX Aarch64) 
+ 
+ 
+-Compiler version: 11.0.1 20210307 (experimental) (SAUX Aarch64) 
++Compiler version: 11.0.1 20210314 (experimental) (SAUX Aarch64) 
+ Platform: aarch64-unknown-linux-gnu
+ configure flags: --prefix=/usr --libexecdir=/usr/lib --enable-bootstrap --enable-languages=c,c++,objc,fortran,lto --enable-checking=release --enable-threads=posix --enable-__cxa_atexit --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-standard-branch-protection --enable-initfini-array --enable-gnu-unique-object --enable-linker-build-id --enable-shared --enable-gold=no --enable-plugin --disable-nls --disable-multilib --disable-libssp --disable-libunwind-exceptions --with-arch=armv8-a --with-abi=lp64 --with-system-zlib --with-linker-hash-style=gnu --with-bugurl=https://github.com/sajcho/saux/issue --with-pkgversion='SAUX Aarch64'
+ EOF
