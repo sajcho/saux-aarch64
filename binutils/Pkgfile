@@ -4,8 +4,8 @@
 # Depends on:	flex texinfo zlib
 
 name=binutils
-version=2.36.1
-release=0
+version=2.37
+release=1
 source=(https://ftpmirror.gnu.org/gnu/${name}/${name}-${version}.tar.xz)
 
 build() {
@@ -19,15 +19,14 @@ build() {
 				--enable-ld=default \
 				--enable-gold=no \
 				--enable-plugins \
+				--enable-shared \
 				--enable-threads \
 				--enable-relro \
-				--enable-secureplt \
 				--enable-64-bit-bfd \
 				--enable-install-libiberty \
 				--enable-deterministic-archives \
-				--enable-default-hash-style=gnu \
+				--enable-default-hash-style=both \
 				--disable-nls \
-				--disable-shared \
 				--disable-werror \
 				--disable-multilib \
 				--disable-gdb \
@@ -39,18 +38,14 @@ build() {
 	make tooldir=/usr
 
 	make -k check < /dev/null || :
-
 	cat {gas/testsuite/gas,ld/ld,binutils/binutils}.sum
-
 	for file in {gas/testsuite/gas,ld/ld,binutils/binutils}.{sum,log}
 	do
 		ln $file binutils-aarch64-unknown-linux-gnu-$(basename $file) || :
 	done
-	
-	tar cJf ${name}-${version}-result-test.tar.xz \
+	tar cJf ${name}-${version}-${release}-result-test.tar.xz \
 		binutils-aarch64-unknown-linux-gnu-*.{sum,log}
-
-	cp ${name}-${version}-result-test.tar.xz $PKGMK_PACKAGE_DIR
+	cp ${name}-${version}-${release}-result-test.tar.xz $PKGMK_PACKAGE_DIR
 
 	make tooldir=/usr DESTDIR=$PKG install
 
@@ -59,8 +54,9 @@ build() {
 		ln -s ${f##*/} $PKG/usr/bin/aarch64-unknown-linux-gnu-${f##*/}
 	done
 
+	rm  $PKG/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.a
 	rm -r $PKG/usr/share/info
 	rm $PKG/usr/share/man/man1/{dlltool,windres,windmc}.1
 
-	sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.la 
+	sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes}.la
 }
